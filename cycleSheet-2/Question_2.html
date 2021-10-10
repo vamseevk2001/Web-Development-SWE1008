@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>
+        Question 2
+    </title>
+
+    <style>
+        #white {
+            background: white;
+            position: relative;
+            height: 480px;
+            width: 380px;
+            margin: 6% auto;
+        }
+        
+        body {
+            background: black;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        input {
+            width: 90%;
+        }
+        
+        .main {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(galleryBg.jpeg);
+            position: absolute;
+            background-size: cover;
+        }
+        
+        .button-box {
+            width: 220px;
+            margin: 45px auto;
+            position: relative;
+            box-shadow: 0 0 10px 4px greenyellow;
+            border-radius: 30px;
+        }
+        
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        
+        .btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, white, greenyellow);
+            border-radius: 30px;
+            transition: 0.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div id="white" class="center">
+            <div class="button-box">
+                <div class="btn">
+                    <button type="button" class="toggle-btn">
+Login
+</button>
+                    <button type="button" class="toggle-btn">
+Register
+</button>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div>
+                <input type="text" placeholder="User Id"><br>
+                <input type="text" placeholder="Email Id"><br>
+                <input type="text" placeholder="Enter password">
+            </div>
+            <input type="checkbox" name="tandC" id="tandc">
+            <label for="tandc">I agree to the terms and conditions</label>
+            <br>
+            <div class="center">
+                <button>Register</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

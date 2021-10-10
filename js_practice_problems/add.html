@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        Addition
+    </title>
+</head>
+
+<body>
+    <label for="A">Enter A : </label>
+    <input type="text" name="A" id="A"><br>
+    <label for="B">Enter B : </label>
+    <input type="text" name="B" id="B"><br>
+    <button onclick="addition()">Add</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function addition() {
+            var a = parseInt(document.getElementById("A").value);
+            var b = parseInt(document.getElementById("B").value);
+            var res = a + b;
+            document.getElementById("result").innerHTML = res;
+        }
+    </script>
+</body>
+
+</html>
