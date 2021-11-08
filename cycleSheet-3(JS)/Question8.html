@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <h2>Car Rental Form</h2>
+    <script>
+        function printTable() {
+            var name, email, ph, brand, type, price;
+            name = document.getElementById("name").value;
+            email = document.getElementById("email").value;
+            ph = document.getElementById("ph").value;
+
+            brand = document.getElementById("brand").value
+            type = document.getElementById("type").value
+            price = "$50000"
+
+            var text = "<tr><td>name</td><td>" + name + "</td><tr>" +
+                "<tr><td>email</td><td>" + email + "</td><tr>" +
+                "<tr><td>phone</td><td>" + ph + "</td><tr>" +
+                "<tr><td>brand</td><td>" + brand + "</td><tr>" +
+                "<tr><td>type</td><td>" + type + "</td><tr>" +
+                "<tr><td>Price</td><td>" + price + "</td><tr>"
+
+            document.getElementById("print").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="return false">
+        <input type="text" name="name" id="name" placeholder="Your Name">
+        <br>
+        <br>
+        <input type="text" name="email" id="email" placeholder="Enter your email"><br><br>
+        <input type="text" name="ph" id="ph" placeholder="Phone number"><br><br>
+        <select name="brand" id="brand">
+<option value="">Select Brand</option>
+<option value="BMW">BMW</option>
+<option value="Mercedes">Mercedes</option>
+<option value="Bugati">Buagti</option>
+</select>
+        <select name="type" id="type">
+<option value="">Type of car</option>
+<option value="Electric">Electric</option>
+<option value="Petrol">Petrol</option>
+<option value="Deisel">Deisel</option>
+</select>
+        <br>
+
+        <br>
+        <label>Select your price : </label><br>
+
+        <label for="40000">Below $40000</label>
+        <input type="radio" name="price" id="40000" value="Below $40000">
+        <label for="43000">$43000</label>
+        <input type="radio" name="price" id="43000" value="$43000">
+        <br>
+        <label for="50000">$50000</label>
+        <input type="radio" name="price" id="50000" value="$50000">
+        <label for="60000">$60000</label>
+        <input type="radio" name="price" id="60000" value="$60000">
+        <br>
+        <br>
+        <input type="submit" value="SEND" onclick="printTable()">
+    </form>
+    <table id="print" border="2px solid black">
+
+    </table>
+</body>
+
+</html>

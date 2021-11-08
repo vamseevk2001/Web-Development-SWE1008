@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Question 3</title>
+    <script>
+        function calSum() {
+            let sum = 0;
+            N = parseInt(document.getElementById("num").value);
+            for (let i = 1; i <= N; i++) {
+                sum += i;
+            }
+            document.getElementById("nn").innerHTML = "The sum of " + N + " numbers is " + "<input readonly=\"readonly\" value=" + sum + ">";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Enter a positive Number <input id="num"></p>
+    <p><button onclick="calSum()">Calculate</button></p>
+    <p id="nn"> </p>
+</body>
+
+</html>

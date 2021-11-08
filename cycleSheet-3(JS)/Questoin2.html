@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>
+        Qn2
+    </title>
+    <h2>SIMPLE INTEREST CALCULATOR</h2>
+    <script>
+        function calc_SI() {
+            var principle, rate, years, si;
+
+            principle = document.getElementById("p_amt").value;
+            rate = document.getElementById("interest").value;
+            years = document.getElementById("years").value;
+
+            si = (principle * rate * years) / 100;
+
+            document.getElementById("si").value = si;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Enter Principle Amount:
+            </td>
+            <td>
+                <input type="text" name="p_amt" id="p_amt">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Interest Rate:
+            </td>
+            <td>
+                <input type="text" name="interest" id="interest">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter the no. of years:
+            </td>
+            <td>
+                <input type="text" name="years" id="years">
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <button onclick="calc_SI()">Calculate</button>
+
+    <br>
+    <br>
+
+    <h3>Result: </h3>
+    Simple Interest: <input type="text" name="si" id="si">
+
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <script>
+        function check() {
+            var fname, lname, email, day;
+
+            var regex = "^$"
+            fname = document.getElementById("fname").value;
+            lname = document.getElementById("lname").value;
+            email = document.getElementById("email").value;
+            day = document.getElementById("day").value;
+
+            if (fname.match(regex) || lname.match(regex) || email.match(regex) || day.match(regex)) {
+                alert("Some feilds are empty please check")
+            } else {
+                confirm("name: " + fname + " " + lname + "\n" + "email: " + email + "\nselected day : " + day)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>Register Now</h2>
+        <p>Enter your imformation to register</p>
+        <br>
+        <form action="" onsubmit="return false">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" name="fname" placeholder="First Name" id="fname">
+                    </td>
+                    <td>
+                        <input type="text" name="lname" placeholder="Last Name" id="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="email" placeholder="Enter your Email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="day">Select the day</label><br>
+                        <select name="day" id="day">
+<option value="">Select Day</option>
+<option value="Monday">Monday</option>
+<option value="Tuesday">Tuesday</option>
+<option value="wednesday">wednesday</option>
+<option value="Thrusday">Thrusday</option>
+<option value="Friday">Friday</option>
+<option value="Saturday">Saturday</option>
+</select>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br>
+            <input type="submit" value="REGISTER" onclick="check()">
+        </form>
+    </center>
+</body>
+
+</html>

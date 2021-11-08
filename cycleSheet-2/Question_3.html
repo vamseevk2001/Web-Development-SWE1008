@@ -1,188 +1,120 @@
 <html>
 
 <head>
-    <title>
-        Question 3
-    </title>
+    <title>Qn3</title>
     <style>
-        html {
-            display: grid;
-            min-height: 100%;
-        }
-        
-        body {
-            display: grid;
-            background: pink;
-            font-family: font, sans-serif;
-            text-transform: uppercase;
-        }
-        
-        .container {
+        div.relative {
             position: relative;
-            margin: auto;
-            overflow: hidden;
-            width: 520px;
-            height: 350px;
-            background: white;
-            box-shadow: 5px 5px 15px rgba(rose, .5);
-            border-radius: 10px;
+            width: 750px;
+            height: 500px;
+            background-color: #444444;
+        }
+        
+        div.absolute0 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 750px;
+            height: 70px;
+        }
+        
+        div.absolute1 {
+            position: absolute;
+            top: 110px;
+            right: 10px;
+            width: 175px;
+            height: 380px;
+            background-color: white;
+        }
+        
+        div.absolute2 {
+            position: absolute;
+            top: 110px;
+            left: 10px;
+            width: 175px;
+            height: 380px;
+            background-color: white;
+        }
+        
+        div.absolute3 {
+            position: absolute;
+            top: 110px;
+            right: 195px;
+            width: 175px;
+            height: 380px;
+            background-color: white;
+        }
+        
+        div.absolute4 {
+            position: absolute;
+            top: 110px;
+            left: 195px;
+            width: 175px;
+            height: 380px;
+            background-color: white;
+        }
+        
+        div.relative2 {
+            position: relative;
+            width: 70px;
+            height: 10px;
+            left: 40px;
+            top: 13px;
+            text-align: center;
+            font-size: 10px;
+            padding: 5px;
+            background-color: #6FB4FF;
+            color: white;
+            border-radius: 20px
+        }
+        
+        h3 {
+            font-family: arial;
         }
         
         p {
-            font-size: 0.6em;
-            color: rose;
-            letter-spacing: 1px;
-        }
-        
-        h1 {
-            font-size: 1.2em;
-            color: dark;
-            margin-top: -5px;
-        }
-        
-        h2 {
-            color: tan;
-            margin-top: -5px;
-        }
-        
-        img {
-            width: 290px;
-            margin-top: 47px;
-        }
-        
-        .slideshow-buttons {
-            top: 70%;
-            display: none;
-        }
-        
-        .one,
-        .two,
-        .three,
-        .four {
-            position: absolute;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: light;
-        }
-        
-        .one {
-            left: 22%;
-        }
-        
-        .two {
-            left: 27%;
-        }
-        
-        .three {
-            left: 32%;
-        }
-        
-        .four {
-            left: 37%;
-        }
-        
-        .product {
-            position: absolute;
-            width: 40%;
-            height: 100%;
-            top: 10%;
-            left: 60%;
-        }
-        
-        .desc {
-            text-transform: none;
-            letter-spacing: 0;
-            margin-bottom: 17px;
-            font-size: .7em;
-            line-height: 1.6em;
-            margin-right: 25px;
-            text-align: justify;
-        }
-        
-        button {
-            background: darken(light, 10%);
-            padding: 10px;
-            display: inline-block;
-            outline: 0;
-            border: 0;
-            margin: -1px;
-            border-radius: 2px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-            cursor: pointer;
-        }
-        
-        .add {
-            width: 67%;
-        }
-        
-        .like {
-            width: 22%;
-        }
-        
-        .sizes {
-            display: grid;
-            color: pink;
-            grid-template-columns: repeat(auto-fill, 30px);
-            width: 60%;
-            grid-gap: 4px;
-            margin-left: 20px;
-            margin-top: 5px;
-        }
-        
-        .pick {
-            margin-top: 11px;
-            margin-bottom: 0;
-            color: pink;
-            margin-left: 20px;
-        }
-        
-        .size {
-            padding: 9px;
-            border: 1px solid light;
-            font-size: 0.7em;
-            text-align: center;
+            font-size: 10px;
+            font-family: arial;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="images">
-            <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
-        </div>
-        <div class="slideshow-buttons">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-            <div class="four"></div>
-        </div>
-        <p class="pick">choose size</p>
-        <div class="sizes">
-            <div class="size">5</div>
-            <div class="size">6</div>
-            <div class="size">7</div>
-            <div class="size">8</div>
-            <div class="size">9</div>
-            <div class="size">10</div>
-            <div class="size">11</div>
-            <div class="size">12</div>
-        </div>
-        <div class="product">
-            <p>Women's Running Shoe</p>
-            <h1>Nike Epic React Flyknit</h1>
-            <h2>150</h2>
-            <p class="desc">The Nike Epic React Flyknit foam cushioning is responsive yet light-weight, durable yet soft. This creates a sensation that not only enhances the feeling of moving forward, but makes running feel fun, too.</p>
-            <div class="buttons">
-                <button class="add">Add to Cart</button>
-                <button class="like"><span>♥</span></button>
+    <div class="relative">
+        <div class="absolute0"><img src="https://img.freepik.com/free-vector/party-crowd-silhouettes-dancing-ni ghtclub_1048-11557.jpg?size=626&ext=jpg" width="100%" height="150">
+            <div class="absolute1"><img src="night.jpeg" width="175px" height="200" px><br>
+                <h3> &nbsp Best Night Party</h3>
+                <p>&nbsp Sunburn here to rock!!</p>
+                <font size="2"> &nbsp Lorem ipsum dolor sit amet <br>&nbsp Lorem ipsum, dolor sit .</font>
+                <div class="relative2"> More info...
+                </div>
+            </div>
+            <div class="absolute2"><img src="laser.jpeg" width="175px" height="200" px><br>
+                <h3> &nbsp Night Laser Show</h3>
+                <p> &nbsp Laser Shows Update!</p>
+
+                <font size="2">&nbsp Lorem ipsum dolor sit amet <br>&nbsp Lorem ipsum, dolor sit .</font>
+                <div class="relative2">
+                    More info...
+                </div>
+            </div>
+            <div class="absolute3"><img src="dj.jpeg" width="175px" height="200" px><br>
+                <h3>&nbsp DJ-Master Class</h3>
+                <p>&nbsp live Masterclass </p>
+                <font size="2">&nbsp Lorem ipsum dolor sit amet <br>&nbsp Lorem ipsum, dolor sit .</font>
+                <div class="relative2">
+                    More info...
+                </div>
+            </div>
+            <div class="absolute4"><img src="shawn.jpeg" width="175px" height="200" px> <br>
+                <h3>&nbsp Live Music</h3>
+                <p> &nbsp Live shows by famous musicians</p>
+                <font size="2">&nbsp Lorem ipsum dolor sit amet <br>&nbsp Lorem ipsum, dolor sit .</font>
+                <div class="relative2">
+                    More info...
+                </div>
             </div>
         </div>
-    </div>
-
-
 </body>
 
 </html>

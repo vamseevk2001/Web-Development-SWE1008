@@ -1,0 +1,56 @@
+<html>
+
+<body>
+    <form name="student" method="POST" onsubmit="return validate()">
+        Name: <input type="text" name="name">
+        <br> DOB: <input type="text" name="dob" id="dob">
+        <br>age: <input type="number" name="age" id="age"> <br> Gender:
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select> <br> Mobile no: <input type="text" name="phone" id="phone"> <br> Country:
+        <select name="country" id="country">
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+            <option value="China">china</option>
+        </select> <br> Education :
+        <select name="Education" id="" multiple>
+            <option value="btech">Btech</option>
+            <option value="Mtech">Mtech</option>
+            <option value="BCA">BCA</option>
+        </select>
+        <br>
+        <input type="submit" value="submit">
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function validate() {
+
+
+            var dob = document.getElementById("dob").value;
+            var ph = document.getElementById("phone").value;
+
+            var phone_patt = /\d{10}/;
+            var dob_patt = /\d\d-\d\d-\d\d\d\d/;
+
+            if (dob_patt.test(dob)) {
+                return true;
+            } else {
+                alert("Please enter a valid date of birth !!!!")
+                return false;
+            }
+
+            if (phone_patt.test(ph)) {
+                return true;
+            } else {
+                alert("Please enter a valid phone no. !!!");
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

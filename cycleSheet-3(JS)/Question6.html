@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <script>
+        function solve() {
+            var root1, root2;
+
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+
+            var discriminant = b * b - 4 * a * c;
+
+            var text = ""
+
+            // condition for real and different roots
+            if (discriminant > 0) {
+                root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+                text += "Root 1 : <input value=\"" + root1 +
+                    "\"><br>Root 2 : <input value=\"" + root2 + "\">"
+            }
+
+            // condition for real and equal roots
+            else if (discriminant == 0) {
+                root1 = root2 = -b / (2 * a);
+
+                text += "Root 1 : <input value=\"" + root1 +
+                    "\"><br>Root 2 : <input value=\"" + root2 + "\">"
+            }
+
+            // if roots are not real
+            else {
+                let realPart = (-b / (2 * a)).toFixed(2);
+                let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+                text += "Root 1 : <input value=\"" + realPart + " + " + imagPart + "i " +
+                    "\"><br>Root 2 : <input value=\"" + realPart + " - " + imagPart + "i " + "\">"
+            }
+
+            document.getElementById("result").innerHTML = text
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Roots of the Quadratic Equation</h2>
+    Equation form : ax <sup>2</sup> + bx + c
+    <br>
+    <br> Enter a : <input type="text" name="a" id="a">
+    <br> Enter b : <input type="text" name="b" id="b">
+    <br> Enter c : <input type="text" name="b" id="c">
+    <br>
+    <br>
+    <button onclick="solve()">SOLVE</button>
+    <br>
+    <h3 id="result">
+
+    </h3>
+
+
+</body>
+
+</html>
